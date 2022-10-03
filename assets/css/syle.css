@@ -1,15 +1,15 @@
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: whitesmoke
+    background-color: whitesmoke;
     font-size: 16px;
     line-height: 1;
-  }
-  
-  .container {
+}
+
+.container {
     max-width: 1024px;
-  }
-  
-  textarea{
+}
+
+textarea {
     background: transparent;
     border: none;
     resize: none;
@@ -17,36 +17,63 @@ body {
     border-left: 1px solid black;
     padding: 10px;
     letter-spacing: 1;
-  }
-  
-  .jumbotron {
+}
+
+.jumbotron {
     text-align: center;
     background-color: transparent;
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
-  }
-  
-  #clearFieldsBtn {
+}
+
+#lead {
+    font-size: 30px;
+}
+
+#event-saved {
+    display: flex;
+    justify-content: center;
+}
+
+.local-storage-span {
+    font-family: serif;
+    color: red;
+    margin-left: 2px;
+}
+
+.event-saved-wrapper {
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    align-content: center;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+#clearFieldsBtn {
     margin-top: 10px;
-  }
-  
-  .description {
+    align-items: center;
+}
+
+.description {
     white-space: pre-wrap;
     font-weight: 600;
-  }
-  
-  .time-block {
+}
+
+.time-block {
     text-align: center;
-  }
-  
-  .row {
+}
+
+.row {
     white-space: pre-wrap;
     height: 80px;
     border-top: 1px solid white;
-  }
-  
-  .hour {
+}
+
+.hour {
     background-color: white;
     color: rgb(82, 82, 82);
     padding-top: 27px;
@@ -55,37 +82,37 @@ body {
     font-weight: 500;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
-  }
-  
-  .past {
+}
+
+.past-hour {
     background-color: #d9d9d9;
     border-radius: 15px;
     color: white;
-  }
-  
-  .present {
+}
+
+.present-hour {
     background-color: #ff5c33;
     border-radius: 15px;
-  }
-  
-  .future {
+}
+
+.future-hour {
     background-color: #99ff99;
     border-radius: 15px;
-  }
-  
-  .saveBtn {
+}
+
+.saveBtn {
     border-left: 1px solid rgb(82, 82, 82);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #0984e3;
     color: white;
-  }
-  
-  .saveBtn i:hover {
+}
+
+/*  .saveBtn i:hover {
     font-size: 30px;
     transition: all 0.2s ease-in-out;
   }
-  
-  .white-text {
+*/
+.white-text {
     color: white;
-  }
+}

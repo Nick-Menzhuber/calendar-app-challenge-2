@@ -1,42 +1,42 @@
 $(document).ready(function () {
-    //Moment.js code for current date and time
-    let NowMoment = moment().format("MMMM Do YYYY");
+    //sets current day and hour
+    let currentDay = moment().format("dddd, MMMM Do YYYY");
     let displayDate = document.getElementById("currentDay");
-    displayDate.innerHTML = NowMoment;
+    displayDate.innerHTML = currentDay;
     let currentHour = moment().format("HH");
   
-    // Button function to clear local storage and clear contents
+    // gives button functionality to clear local storage
     $("#clearFieldsBtn").click(function (event) {
       event.preventDefault;
       $("textarea").val("");
       localStorage.clear();
     });
   
-    //grabs hour from each time slot and compares it to actual time
+    //looks at hour from every time slot and compares it to the actual time
     $(".time-div").each(function () {
       var timeDiv = $(this).attr("id").split("-")[1];
       
       if (currentHour == timeDiv) {
-        $(this).addClass("present");
+        $(this).addClass("present-hour");
         $(this).children(".description").addClass("white-text");
       } else if (currentHour < timeDiv) {
-        $(this).removeClass("present");
-        $(this).addClass("future");
+        $(this).removeClass("present-hour");
+        $(this).addClass("future-hour");
       } else if (currentHour > timeDiv) {
-        $(this).removeClass("future");
-        $(this).addClass("past");
+        $(this).removeClass("future-hour");
+        $(this).addClass("past-hour");
       }
     });
   
-    //grabs values from time and value divs and saves them to local storage
-    $(".saveBtn").click(function (event) {
+    //takes values from time and value divs and saves them to local storage
+    $(".saveBtn").click(function (event) {  
       event.preventDefault();
       var value = $(this).siblings(".time-block").val();
       var time = $(this).parent().attr("id").split("-")[1];
       localStorage.setItem(time, value);
     });
   
-    //retrieves items from local storage and sets them in proper places
+    //takes items from local storage and displays them in correct slots
     $("#hour-09 .time-block").val(localStorage.getItem("09"));
     $("#hour-10 .time-block").val(localStorage.getItem("10"));
     $("#hour-11 .time-block").val(localStorage.getItem("11"));
