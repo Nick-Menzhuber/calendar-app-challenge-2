@@ -111,6 +111,10 @@ textarea {
     color: white;
 }
 
+button:hover {
+    color:black;
+}
+
 .saveBtn i:hover {
     font-size: 30px;
     transition: all 0.2s ease-in-out;

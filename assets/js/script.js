@@ -34,7 +34,9 @@ $(document).ready(function () {
     $(".saveBtn").click(function (event) {  
       event.preventDefault();
       $(".event-saved-wrapper").show(1000)
-        
+        setInterval(function (){
+            $(".event-saved-wrapper").hide()
+        }, 3000)
       var value = $(this).siblings(".time-block").val();
       var time = $(this).parent().attr("id").split("-")[1];
       localStorage.setItem(time, value);
