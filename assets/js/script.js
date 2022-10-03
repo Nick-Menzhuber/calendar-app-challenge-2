@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
     //sets current day and hour
     let currentDay = moment().format("dddd, MMMM Do YYYY");
@@ -31,10 +33,14 @@ $(document).ready(function () {
     //takes values from time and value divs and saves them to local storage
     $(".saveBtn").click(function (event) {  
       event.preventDefault();
+      $(".event-saved-wrapper").show(1000)
+        
       var value = $(this).siblings(".time-block").val();
       var time = $(this).parent().attr("id").split("-")[1];
       localStorage.setItem(time, value);
     });
+ 
+
   
     //takes items from local storage and displays them in correct slots
     $("#hour-09 .time-block").val(localStorage.getItem("09"));
